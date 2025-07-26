@@ -1,1 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #1d62d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  background: url('grass-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff6e0;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.subject-list .row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f46a6a;
+  margin: 5px 0;
+  padding: 10px 15px;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.credits {
+  background-color: #fdf86e;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
