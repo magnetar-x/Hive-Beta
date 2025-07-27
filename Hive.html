@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -47,3 +47,246 @@
   </main>
 </body>
 </html
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BitHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding-top: 70px; /* space for fixed navbar */
+    }
+
+    /* === Sticky Navbar === */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: #3a71c3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .navbar img {
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    .navbar-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: 32px;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+      color: yellow;
+    }
+
+    /* === Splash Screen === */
+    #splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom, #246cf9, #e3f9ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 1.6s ease;
+    }
+
+    #splash-screen.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .splash-circle {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #cde2bd 10%, #0e1d30 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 50px rgba(0,0,0,0.4);
+    }
+
+    .splash-text {
+      font-size: 52px;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      text-align: center;
+      letter-spacing: 12px;
+      line-height: 1.3;
+    }
+
+    /* === Content === */
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .subject-tile {
+      width: 140px;
+      height: 140px;
+      background-color: #23b2ff;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .subject-tile:hover {
+      transform: scale(1.05);
+    }
+
+    .subject-highlight {
+      background-color: #ffd300;
+      color: black;
+      font-style: italic;
+      padding: 1px 4px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .subject-tile span {
+      display: block;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <div class="splash-circle">
+      <div class="splash-text">BIT<br />HIVE</div>
+    </div>
+  </div>
+
+  <!-- Sticky Top Navbar -->
+  <div class="navbar">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUg..." alt="Logo" />
+    <div class="navbar-title">BitHuB</div>
+    <div class="navbar-links">
+      <a href="#">Home</a>
+      <a href="#">Syllabus</a>
+      <a href="#">Clubs</a>
+      <a href="#">Transport</a>
+      <a href="#">Event</a>
+      <a href="#">Contact</a>
+      <a href="#">BIT</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <h1>Subjects</h1>
+  <div class="subject-grid">
+    <div class="subject-tile">
+      Computer<br />
+      <span class="subject-highlight">Science</span>
+      <span>4 credits</span>
+    </div>
+    <div class="subject-tile">
+      Data<br />
+      <span class="subject-highlight">Structures</span>
+      <span>3 credits</span>
+    </div>
+    <div class="subject-tile">
+      <span class="subject-highlight">Mathematics</span><br />
+      Algebra
+      <span>4 credits</span>
+    </div>
+    <div class="subject-tile">
+      Operating<br />
+      <span class="subject-highlight">Systems</span>
+      <span>3 credits</span>
+    </div>
+    <div class="subject-tile">
+      Web<br />
+      <span class="subject-highlight">Development</span>
+      <span>2 credits</span>
+    </div>
+    <div class="subject-tile">
+      <span class="subject-highlight">Database</span><br />
+      Design
+      <span>3 credits</span>
+    </div>
+    <div class="subject-tile">
+      Software<br />
+      <span class="subject-highlight">Engineering</span>
+      <span>2 credits</span>
+    </div>
+    <div class="subject-tile">
+      <span class="subject-highlight">AI</span><br />
+      & ML
+      <span>3 credits</span>
+    </div>
+  </div>
+
+  <!-- Splash Fade Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash-screen');
+      setTimeout(() => {
+        splash.classList.add('hidden');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
